@@ -48,8 +48,13 @@ def one_hot(labels, num_classes):
     labels = np.asarray(labels, dtype=int)
     return np.eye(num_classes, dtype=float)[labels]
 
-# Step 7 - gather_true_class_probs (not yet solved)
-# TODO: implement
+# Step 7 - gather_true_class_probs
+import numpy as np
+def gather_true_class_probs(probs, labels):
+    # TODO: return probs[i, labels[i]] for every row i as a 1D length-N array.
+    probs = np.asarray(probs)
+    labels = np.asarray(labels)
+    return probs[np.arange(probs.shape[0]), labels]
 
 # Step 8 - cross_entropy_loss (not yet solved)
 # TODO: implement
